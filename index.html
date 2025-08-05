@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <title>Happy Birthday Farija!</title>
@@ -8,7 +8,7 @@
       background-color: #ffe4e1;
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 80px;
     }
 
     h1 {
@@ -22,33 +22,36 @@
     }
 
     img {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🎵 Audio -->
+  <!-- 🎵 Music -->
   <audio id="bg-music" autoplay loop>
     <source src="https://cdn.pixabay.com/audio/2022/06/14/audio_5a4c4910f4.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
+  <!-- 🎉 Birthday Message -->
   <h1>🎉 শুভ জন্মদিন ফারিজা আফরিন! 🎂</h1>
-  <p>তোমার জন্য রইল অনেক ভালোবাসা, দোয়া এবং সুখ‑সমৃদ্ধিতে ভরা একটি সুন্দর দিন।</p>
+  <p>তোমার জন্য রইল অনেক ভালোবাসা, দোয়া এবং সুখ-সমৃদ্ধিতে ভরা একটি সুন্দর দিন।</p>
 
-  <img src="https://i.imgur.com/U3vTGjX.png" alt="Birthday Cake" width="300">
+  <!-- 🎂 Cute Image -->
+  <img src="https://i.imgur.com/I7zB5bC.png" alt="Birthday Boat" width="250">
 
-  <!-- 🎯 Script to play on first tap -->
+  <!-- ✅ Script: Tap to Play (Mobile fix) -->
   <script>
     const music = document.getElementById('bg-music');
-    document.body.addEventListener('click', function () {
+    document.body.addEventListener('click', () => {
       if (music.paused) {
-        music.play().catch(() => {});
+        music.play().catch(err => {});
       }
     });
   </script>
 
 </body>
 </html>
+
 
