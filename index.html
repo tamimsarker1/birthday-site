@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday Farija!</title>
-    <style>
-        body {
-            background-color: #ffe4e1;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-        }
+  <meta charset="UTF-8">
+  <title>Happy Birthday Farija!</title>
+  <style>
+    body {
+      background-color: #ffe4e1;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
 
-        h1 {
-            color: #ff1493;
-            font-size: 60px;
-        }
+    h1 {
+      color: #ff1493;
+      font-size: 60px;
+    }
 
-        p {
-            font-size: 24px;
-            color: #333;
-        }
-    </style>
+    p {
+      font-size: 24px;
+      color: #333;
+    }
+
+    img {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <audio autoplay loop>
-  <source src="https://cdn.pixabay.com/audio/2022/06/14/audio_5a4c4910f4.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
-    <h1>🎉 শুভ জন্মদিন ফারিজা আফরিন! 🎂</h1>
-    <p>তোমার জন্য রইল অনেক ভালোবাসা, দোয়া এবং সুখ-সমৃদ্ধিতে ভরা একটি সুন্দর দিন।</p>
-    <img src="https://i.imgur.com/U3vTGjX.png" alt="Birthday Cake" width="300">
+  <!-- 🎵 Audio -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/06/14/audio_5a4c4910f4.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>🎉 শুভ জন্মদিন ফারিজা আফরিন! 🎂</h1>
+  <p>তোমার জন্য রইল অনেক ভালোবাসা, দোয়া এবং সুখ‑সমৃদ্ধিতে ভরা একটি সুন্দর দিন।</p>
+
+  <img src="https://i.imgur.com/U3vTGjX.png" alt="Birthday Cake" width="300">
+
+  <!-- 🎯 Script to play on first tap -->
+  <script>
+    const music = document.getElementById('bg-music');
+    document.body.addEventListener('click', function () {
+      if (music.paused) {
+        music.play().catch(() => {});
+      }
+    });
+  </script>
+
 </body>
 </html>
+
